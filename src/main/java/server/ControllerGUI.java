@@ -105,11 +105,11 @@ public class ControllerGUI {
         lbFriendList.setBounds(200,50,100,16);
         fmMenu.getContentPane().add(lbFriendList);
 
-        JLabel lbFriendName = new JLabel("Add Friend: ");
+        JLabel lbFriendName = new JLabel("Chat with: ");
         lbFriendName.setBounds(10, 445, 110, 16);
         fmMenu.getContentPane().add(lbFriendName);
 
-        JLabel lbFriendText = new JLabel("Chat with: ");
+        JLabel lbFriendText = new JLabel("Add friend: ");
         lbFriendText.setBounds(10, 476, 110, 16);
         fmMenu.getContentPane().add(lbFriendText);
     }
@@ -137,14 +137,14 @@ public class ControllerGUI {
         fmMenu.getContentPane().add(txtFriendList);
 
         //Add friend area
-        txtOnlineName = new JTextField("Type name to add");
+        txtOnlineName = new JTextField("Type name to chat");
         txtPeerList.setEditable(true);
         txtOnlineName.setColumns(10);
         txtOnlineName.setBounds(125, 439, 192, 28);
         fmMenu.getContentPane().add(txtOnlineName);
 
         //Chat with area
-        txtFriendName = new JTextField("Type name to chat");
+        txtFriendName = new JTextField("Type name to add");
         txtFriendList.setEditable(true);
         txtFriendName.setColumns(10);
         txtFriendName.setBounds(125, 470, 192, 28);
@@ -158,7 +158,7 @@ public class ControllerGUI {
 
 
             public void actionPerformed(ActionEvent arg0) {
-                System.out.println("here1");
+                //System.out.println("here1");
                 String name = txtOnlineName.getText();
                 if (name.equals("") || Controller.online_list == null) {
                     JOptionPane.showMessageDialog(fmMenu, "Name 's friend mistake!");
@@ -169,14 +169,14 @@ public class ControllerGUI {
                     return;
                 }
                 int size = Controller.online_list.size();
-                System.out.println("here2");
-                System.out.println(size);
+                //System.out.println("here2");
+                //System.out.println(size);
                 //System.out.println(toString(online_list));
                 for (int i = 0; i < size; i++) {
-                    System.out.println("here3");
-                    System.out.println(size);
+                    //System.out.println("here3");
+                    //System.out.println(size);
                     if (name.equals(Controller.online_list.get(i).getName())) {
-                        System.out.println("here4");
+                        //System.out.println("here4");
 
                         try {
                             System.out.println("here");
@@ -285,3 +285,4 @@ public class ControllerGUI {
 //        txtFriendList.setText("");
 //    }
 }
+
